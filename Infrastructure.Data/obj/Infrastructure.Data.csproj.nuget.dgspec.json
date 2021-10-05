@@ -1,0 +1,150 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Infnet\\2º Bloco - Desenvolvimento .NET\\WEB ASP .NET - WEB API (DR4)\\Projeto AT (OFICIAL)\\Infrastructure.Data\\Infrastructure.Data.csproj": {}
+  },
+  "projects": {
+    "D:\\Infnet\\2º Bloco - Desenvolvimento .NET\\WEB ASP .NET - WEB API (DR4)\\Projeto AT (OFICIAL)\\Domain.Model\\Domain.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Infnet\\2º Bloco - Desenvolvimento .NET\\WEB ASP .NET - WEB API (DR4)\\Projeto AT (OFICIAL)\\Domain.Model\\Domain.Model.csproj",
+        "projectName": "Domain.Model",
+        "projectPath": "D:\\Infnet\\2º Bloco - Desenvolvimento .NET\\WEB ASP .NET - WEB API (DR4)\\Projeto AT (OFICIAL)\\Domain.Model\\Domain.Model.csproj",
+        "packagesPath": "C:\\Users\\Cammarota\\.nuget\\packages\\",
+        "outputPath": "D:\\Infnet\\2º Bloco - Desenvolvimento .NET\\WEB ASP .NET - WEB API (DR4)\\Projeto AT (OFICIAL)\\Domain.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cammarota\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[4.7.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Infnet\\2º Bloco - Desenvolvimento .NET\\WEB ASP .NET - WEB API (DR4)\\Projeto AT (OFICIAL)\\Infrastructure.Data\\Infrastructure.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Infnet\\2º Bloco - Desenvolvimento .NET\\WEB ASP .NET - WEB API (DR4)\\Projeto AT (OFICIAL)\\Infrastructure.Data\\Infrastructure.Data.csproj",
+        "projectName": "Infrastructure.Data",
+        "projectPath": "D:\\Infnet\\2º Bloco - Desenvolvimento .NET\\WEB ASP .NET - WEB API (DR4)\\Projeto AT (OFICIAL)\\Infrastructure.Data\\Infrastructure.Data.csproj",
+        "packagesPath": "C:\\Users\\Cammarota\\.nuget\\packages\\",
+        "outputPath": "D:\\Infnet\\2º Bloco - Desenvolvimento .NET\\WEB ASP .NET - WEB API (DR4)\\Projeto AT (OFICIAL)\\Infrastructure.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cammarota\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "D:\\Infnet\\2º Bloco - Desenvolvimento .NET\\WEB ASP .NET - WEB API (DR4)\\Projeto AT (OFICIAL)\\Domain.Model\\Domain.Model.csproj": {
+                "projectPath": "D:\\Infnet\\2º Bloco - Desenvolvimento .NET\\WEB ASP .NET - WEB API (DR4)\\Projeto AT (OFICIAL)\\Domain.Model\\Domain.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

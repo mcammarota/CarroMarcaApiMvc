@@ -1,0 +1,106 @@
+﻿@model MarcaViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PaisFundacao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PaisFundacao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeFundador)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NomeFundador)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DiaFundacao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DiaFundacao)
+        </dd>
+    </dl>
+    <hr />
+    @if (Model.Carros.Count > 0)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @nameof(CarroViewModel.Modelo)
+                    </th>
+                    <th>
+                        @nameof(CarroViewModel.Ano)
+                    </th>
+                    <th>
+                        @nameof(CarroViewModel.Portas)
+                    </th>
+                    <th>
+                        @nameof(CarroViewModel.Cambio)
+                    </th>
+                    <th>
+                        @nameof(CarroViewModel.Direcao)
+                    </th>
+                    <th>
+                        @nameof(CarroViewModel.Lancamento)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Carros)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Modelo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ano)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Portas)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cambio)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Direcao)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Lancamento)
+                        </td>
+                        <td>
+                            <a asp-controller="Carro" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-controller="Carro" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-controller="Carro" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    else
+    {
+        <p>Essa marca não possui carro cadastrado.</p>
+    }
+
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

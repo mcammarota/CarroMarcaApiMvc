@@ -1,0 +1,60 @@
+﻿@model CarroViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>CarroModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ano)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ano)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Portas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Portas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cambio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cambio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Direcao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Direcao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lancamento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lancamento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Marca.Nome)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

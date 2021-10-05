@@ -1,0 +1,71 @@
+﻿@model IEnumerable<MarcaViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<br />
+
+<form asp-action="Index">
+    <input type="text" name="buscaTexto" id="buscaTexto" value="@ViewBag.BuscaTexto" />
+    <input type="submit" value="Search" class="btn btn-primary" />
+</form>
+
+<br />
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaisFundacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeFundador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiaFundacao)
+            </th>
+            <th>Quantidade</th>
+            <th>Modelos</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var marcaModel in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => marcaModel.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => marcaModel.PaisFundacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => marcaModel.NomeFundador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => marcaModel.DiaFundacao)
+            </td>
+            <td>
+                @marcaModel.Carros.Count
+            </td>
+            <td>
+                @*recomendado usar um ViewModel e não colocar essa lógica aqui*@
+                @string.Join(", ", marcaModel.Carros.Select(x => x.Modelo))
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@marcaModel.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@marcaModel.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@marcaModel.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
